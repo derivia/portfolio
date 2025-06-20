@@ -1,60 +1,44 @@
+import Project from "./Project";
+import SectionTitle from "./SectionTitle";
+
 const Projects = () => {
 	const projects = [
 		{
 			title: "Whisp",
 			description:
-				"A real-time chat application made with C99 and sockets, featuring private messaging and group chats.",
+				"A real-time chat app in C99 using sockets, with private and group messaging features.",
 			link: "https://github.com/derivia/whisp",
-			image: "/whisp.png",
+			icon: "💬",
 		},
 		{
 			title: "Blog",
 			description:
-				"A personal blog platform, built with React and Tailwind CSS.",
+				"A personal blogging platform built with React and Tailwind CSS, with authentication",
 			link: "https://github.com/derivia/blog",
-			image: "/blog.png",
+			icon: "📝",
 		},
 		{
 			title: "AlgoVisual",
 			description:
-				"An interactive algorithm visualizer that helps understand sorting algorithms.",
+				"An interactive visualizer that demonstrates how sorting algorithms work step by step.",
 			link: "https://github.com/derivia/algovisual",
-			image: "/algovisual.png",
+			icon: "📊",
 		},
 	];
 
 	return (
-		<section id="projects" className="py-20 bg-background-secondary">
-			<div className="container mx-auto text-center">
-				<h2 className="text-4xl md:text-4xl font-bold mb-12">My Projects</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+		<section id="projects" className="py-16">
+			<div className="container mx-auto px-4 md:px-8">
+				<SectionTitle title="Selected Work" />
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
 					{projects.map((project, index) => (
-						<div
+						<Project
 							key={index}
-							className="bg-white rounded-xl shadow-lg overflow-hidden text-left transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-						>
-							<a
-								href={project.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-accent text-center font-semibold"
-							>
-								<img
-									src={project.image}
-									alt={project.title}
-									className="w-full h-48 object-cover inner-shadow"
-								/>
-								<div className="p-6">
-									<h3 className="text-xl font-bold mb-2 text-text-primary">
-										{project.title}
-									</h3>
-									<p className="mb-4 text-text-secondary">
-										{project.description}
-									</p>
-									<span className="text-lg">Click to view project</span>
-								</div>
-							</a>
-						</div>
+							description={project.description}
+							icon={project.icon}
+							title={project.title}
+							link={project.link}
+						/>
 					))}
 				</div>
 			</div>

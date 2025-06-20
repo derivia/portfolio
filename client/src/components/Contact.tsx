@@ -1,17 +1,18 @@
 const Contact = () => {
 	return (
-		<section id="contact" className="py-20 bg-section-bg">
-			<div className="container mx-auto text-center">
-				<h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-primary">
-					Contact Me
+		<section id="contact" className="py-16 bg-contact-bg text-center">
+			<div className="container mx-auto px-4 md:px-8">
+				<h2 className="text-3xl font-normal mb-6 text-center relative">
+					Let's Connect
+					<span className="absolute bottom-[-0.5rem] left-1/2 -translate-x-1/2 w-10 h-px bg-section-title-underline"></span>
 				</h2>
-				<p className="mb-8 text-lg text-text-secondary">
-					I would love to hear from you! Feel free to reach out with any
-					questions or opportunities.
+				<p className="max-w-md mx-auto mb-8 text-text-secondary">
+					I'd love to hear from you! Feel free to reach out with any questions
+					or opportunities.
 				</p>
 				<a
 					href="mailto:contato.lorransoares@gmail.com"
-					className="bg-accent text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-accent-hover hover:shadow-lg transition-all duration-300"
+					className="inline-block bg-contact-email-bg text-white px-8 py-3 rounded-full text-sm tracking-wider transition-colors duration-200 hover:bg-contact-email-hover-bg"
 				>
 					contato.lorransoares@gmail.com
 				</a>
