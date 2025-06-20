@@ -1,0 +1,15 @@
+services:
+  ui-portfolio:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: ui-portfolio
+    environment:
+      NODE_ENV: development
+    ports:
+      - "5173:5173"
+    networks:
+      - portfolio-network
+networks:
+  portfolio-network:
+    driver: bridge
