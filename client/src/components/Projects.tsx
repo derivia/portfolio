@@ -22,6 +22,7 @@ const Projects = () => {
 			description:
 				"An interactive visualizer that demonstrates how sorting algorithms work step by step.",
 			link: "https://github.com/derivia/algovisual",
+			deployed: "https://sorting.lorrran.com",
 			icon: "📊",
 		},
 		{
