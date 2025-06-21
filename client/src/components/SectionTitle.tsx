@@ -5,7 +5,7 @@ interface SectionTitleProps {
 }
 const SectionTitle = (props: SectionTitleProps) => {
 	return (
-		<h2 className="text-3xl font-normal mb-6 text-center relative">
+		<h2 className="text-4xl font-semibold mb-6 text-center relative text-heading-primary">
 			{String(props.title[0]).toUpperCase() + String(props.title).slice(1)}
 			<Separator />
 		</h2>

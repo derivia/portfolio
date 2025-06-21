@@ -2,16 +2,16 @@ const Hero = () => {
 	return (
 		<section
 			id="hero"
-			className="w-full h-full text-center mt-64 flex flex-col items-center bg-background"
+			className="w-full min-h-screen flex flex-col justify-center items-center bg-background py-20"
 		>
-			<div className="mb-12">
-				<h1 className="text-4xl md:text-5xl font-normal mb-4 text-heading-primary">
+			<div className="mb-16">
+				<h1 className="text-5xl md:text-6xl font-bold mb-6 text-heading-primary leading-tight">
 					Hi, I'm{" "}
-					<span className="inline-block accent-gradient px-2 rounded font-medium">
+					<span className="inline-block bg-accent-light text-accent px-4 py-2 rounded-xl">
 						Lorran
 					</span>
 				</h1>
-				<p className="text-md md:text-lg text-text-secondary max-w-md mx-auto">
+				<p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
 					A passionate developer creating thoughtful web experiences with clean
 					code and meaningful design.
 				</p>
