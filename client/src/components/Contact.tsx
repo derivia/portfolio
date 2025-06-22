@@ -10,10 +10,10 @@ const Contact = () => {
 					or opportunities.
 				</p>
 				<a
-					href="mailto:contato.lorransoares@gmail.com"
-					className="inline-block bg-accent text-white px-10 py-4 rounded-lg text-md font-semibold tracking-wider transition-colors duration-200 hover:bg-contact-email-hover-bg shadow-md"
+					href="mailto:contato@lorrran.com"
+					className="w-[80%] md:w-fit inline-block bg-accent text-white px-10 py-4 rounded-lg text-md font-semibold tracking-wider transition-colors duration-200 hover:bg-contact-email-hover-bg shadow-md"
 				>
-					contato.lorransoares@gmail.com
+					contato@lorrran.com
 				</a>
 			</div>
 		</section>
