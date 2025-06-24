@@ -33,6 +33,14 @@ const Projects = () => {
 			deployed: "https://flashcards.lorrran.com",
 			icon: "📚",
 		},
+		{
+			title: "AprendaJS",
+			description:
+				"A series of pages in Brazilian Portuguese with educational content about JavaScript.",
+			link: "https://github.com/derivia/aprendajs",
+			deployed: "https://aprendajs.lorrran.com",
+			icon: "🧑",
+		},
 	];
 
 	return (
