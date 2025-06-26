@@ -1,41 +1,52 @@
 export interface ProjectProps {
-	link: string;
-	icon: string;
+	code: string;
+	deploy?: string;
 	title: string;
 	description: string;
-	deployed?: string;
+	tech: string[];
+	emoji: string;
 }
 
 const Project = (props: ProjectProps) => {
 	return (
-		<div className="bg-project-card-bg border border-border rounded-xl p-8 transition-transform duration-200 ease-in-out hover:-translate-y-1 hover:shadow-lg">
-			<div className="w-16 h-16 project-icon-gradient rounded-full mx-auto mb-6 flex items-center justify-center text-3xl shadow-sm">
-				{props.icon}
-			</div>
-			<h3 className="text-xl font-semibold mb-3 text-text-primary text-center">
+		<div className="bg-background-primary p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+			<div className="text-5xl mb-4">{props.emoji}</div>
+			<h3 className="text-2xl font-semibold text-heading-primary mb-3">
 				{props.title}
 			</h3>
-			<p className="text-base text-text-secondary mb-6 leading-relaxed text-center">
+			<p className="text-lg text-text-secondary leading-relaxed mb-6">
 				{props.description}
 			</p>
-			<a
-				href={props.link}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="text-project-link text-base font-medium tracking-wide hover:underline text-center block"
-			>
-				View Code →
-			</a>
-			{props.deployed && (
+			<div className="flex flex-wrap justify-center gap-3 mb-8">
+				{props.tech.map((tag) => (
+					<span
+						key={tag}
+						className="text-sm text-accent bg-skill-tag-bg px-4 py-2 rounded-full uppercase tracking-wider"
+					>
+						{tag}
+					</span>
+				))}
+			</div>
+			<div className="flex flex-col gap-4">
 				<a
-					href={props.deployed}
+					href={props.code}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-project-link text-base font-medium tracking-wide hover:underline text-center block"
+					className="text-accent font-medium pb-1 border-b border-accent hover:text-text-primary hover:border-text-primary transition-all duration-300"
 				>
-					View Online →
+					View Code →
 				</a>
-			)}
+				{props.deploy && (
+					<a
+						href={props.deploy}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-accent font-medium pb-1 border-b border-accent hover:text-text-primary hover:border-text-primary transition-all duration-300"
+					>
+						View Online →
+					</a>
+				)}
+			</div>
 		</div>
 	);
 };

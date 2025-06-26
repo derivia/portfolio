@@ -1,14 +1,15 @@
-import Separator from "./Separator";
-
 interface SectionTitleProps {
 	title: string;
+	isDark?: boolean;
 }
+
 const SectionTitle = (props: SectionTitleProps) => {
+	const textColor = props.isDark ? "text-white" : "text-heading-primary";
+
 	return (
-		<h2 className="text-4xl font-semibold mb-6 text-center relative text-heading-primary">
-			{String(props.title[0]).toUpperCase() + String(props.title).slice(1)}
-			<Separator />
-		</h2>
+		<div className="text-center mb-10">
+			<h2 className={`text-4xl font-thin ${textColor}`}>{props.title}</h2>
+		</div>
 	);
 };
 

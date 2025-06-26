@@ -7,10 +7,10 @@ html {
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	background: #fefefe;
+	color: #333;
 	line-height: 1.5;
-	color: #1c1c1c;
-	background: #ffffff;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -28,11 +28,40 @@ body {
 	margin: 0 auto;
 }
 
-@layer utilities {
-	.accent-gradient {
-		background: #e0e7ff;
+@layer components {
+	.nav-link::before {
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		width: 0;
+		height: 3px;
+		background: #a8b5a0;
+		transition: all 0.3s ease;
+		transform: translateX(-50%);
 	}
-	.project-icon-gradient {
-		background: #f0f4f8;
+
+	.nav-link:hover::before {
+		width: 20px;
+	}
+
+	.scroll-indicator::after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 40px;
+		background: #a8b5a0;
+		margin: 15px auto 0;
+		animation: scroll 2s ease-in-out infinite;
+	}
+}
+
+@keyframes scroll {
+	0%,
+	100% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 1;
 	}
 }

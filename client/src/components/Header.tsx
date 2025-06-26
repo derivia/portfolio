@@ -1,27 +1,43 @@
 const Header = () => {
 	return (
-		<div className="container mx-auto px-6 md:px-12 pt-8">
-			<nav className="relative flex justify-center md:justify-end gap-10 mb-8 md:mb-0">
-				<a
-					href="#about"
-					className="text-text-secondary hover:text-accent transition-colors duration-200 text-base font-medium tracking-wide"
-				>
-					About
-				</a>
-				<a
-					href="#projects"
-					className="text-text-secondary hover:text-accent transition-colors duration-200 text-base font-medium tracking-wide"
-				>
-					Projects
-				</a>
-				<a
-					href="#contact"
-					className="text-text-secondary hover:text-accent transition-colors duration-200 text-base font-medium tracking-wide"
-				>
-					Contact
-				</a>
-			</nav>
-		</div>
+		<nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 py-8">
+        <div className="container mx-auto px-10 flex justify-end items-center">
+				<ul className="flex gap-12">
+					<li>
+						<a
+							href="#about"
+							className="nav-link relative text-gray-600 hover:text-text-primary transition-colors duration-300"
+						>
+							About
+						</a>
+					</li>
+					<li>
+						<a
+							href="#skills"
+							className="nav-link relative text-gray-600 hover:text-text-primary transition-colors duration-300"
+						>
+							Skills
+						</a>
+					</li>
+					<li>
+						<a
+							href="#work"
+							className="nav-link relative text-gray-600 hover:text-text-primary transition-colors duration-300"
+						>
+							Work
+						</a>
+					</li>
+					<li>
+						<a
+							href="#contact"
+							className="nav-link relative text-gray-600 hover:text-text-primary transition-colors duration-300"
+						>
+							Contact
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	);
 };
 

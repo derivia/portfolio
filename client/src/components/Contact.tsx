@@ -1,17 +1,17 @@
-import SectionTitle from "./SectionTitle";
-
 const Contact = () => {
 	return (
-		<section id="contact" className="py-20 bg-background text-center">
-			<div className="container mx-auto px-6 md:px-12">
-				<SectionTitle title="Let's Connect" />
-				<p className="max-w-xl mx-auto mb-10 text-text-secondary text-lg">
+		<section
+			id="contact"
+			className="py-16 bg-contact-bg text-white text-center"
+		>
+			<div className="container mx-auto px-10">
+				<p className="max-w-xl mx-auto mb-10 text-contact-text text-lg leading-relaxed">
 					I'd love to hear from you! Feel free to reach out with any questions
 					or opportunities.
 				</p>
 				<a
 					href="mailto:contato@lorrran.com"
-					className="w-[80%] md:w-fit inline-block bg-accent text-white px-10 py-4 rounded-lg text-md font-semibold tracking-wider transition-colors duration-200 hover:bg-contact-email-hover-bg shadow-md"
+					className="inline-block text-accent border-2 border-accent px-8 py-4 rounded-md text-lg font-light transition-all duration-300 hover:text-contact-text"
 				>
 					contato@lorrran.com
 				</a>
